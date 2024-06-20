@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEIFA - Inicio</title>
+    <title>GEIFA - Publicaciones</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -11,13 +11,14 @@
     <header>
         <img src="images/logo_wb.png" alt="Logo del grupo estudiantil" id="logo">
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="galery.html">Galería</a></li>
-                <li><a href="posts.html" class="active">Publicaciones</a></li>
-                <li><a href="events.html">Eventos</a></li>
-                <li><a href="us.html">Conócenos</a></li>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="index.html" class="main">Inicio</a></li>
+                <li><a href="blogs.html" class="blogs">Blogs</a></li>
+                <li><a href="galery.html" class="galery">Galería</a></li>
+                <li><a href="posts.html" class="active posts">Publicaciones</a></li>
+                <li><a href="events.html" class="events">Eventos</a></li>
+                <li><a href="us.html" class="us">Conócenos</a></li>
             </ul>
         </nav>
     </header>
@@ -25,5 +26,6 @@
         <h1>Bienvenidos a GEIFA</h1>
         <p>Esta es la página principal de nuestro grupo.</p>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

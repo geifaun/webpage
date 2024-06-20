@@ -52,7 +52,6 @@ nav a {
 
 nav a.active {
     text-decoration: underline;
-    text-decoration-style: wavy;
     text-decoration-thickness: 2px;
 }
 
