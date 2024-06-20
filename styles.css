@@ -2,7 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
 }
 
 header {
@@ -85,7 +86,7 @@ nav a.us {
     border: none;
     font-size: 1.5em;
     cursor: pointer;
-    position: relative; /* Necesario para alinear el menú desplegable */
+    position: relative;
 }
 
 @media (max-width: 1200px) {
@@ -93,13 +94,13 @@ nav a.us {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 100%; /* Justo debajo del botón del menú */
+        top: 100%;
         left: calc(50% - 75px);
         transform: scaleY(0) translateX(0);
         background-color: #ffffff;
         border: 1px solid #dddddd;
         border-radius: 15px;
-        width: 150px; /* Ajustar el ancho del menú */
+        width: 150px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transform-origin: top center;
         opacity: 0;
@@ -133,5 +134,5 @@ nav a.us {
 }
 
 main {
-    padding: 100px 0px 20px 20px; /* Añade un relleno superior para que el contenido no quede oculto detrás del header */
+    padding: 100px 0px 20px 20px; 
 }
