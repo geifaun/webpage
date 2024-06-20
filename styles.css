@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20%;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 25px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 55%;
+    max-width: 1200px;
+}
+
+#logo {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav a.active {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+}
+
+nav a.main {
+    color: #e89d1c; 
+}
+
+nav a.blogs {
+    color: #cf6216; 
+}
+
+nav a.galery {
+    color: #b7280f; 
+}
+
+nav a.posts {
+    color: #9a0a17; 
+}
+
+nav a.events {
+    color: #700e31; 
+}
+
+nav a.us {
+    color: #5d184d; 
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative; /* Necesario para alinear el menú desplegable */
+}
+
+@media (max-width: 1200px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Justo debajo del botón del menú */
+        left: calc(50% - 75px);
+        transform: scaleY(0) translateX(0);
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 15px;
+        width: 150px; /* Ajustar el ancho del menú */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform-origin: top center;
+        opacity: 0;
+        overflow: hidden;
+        height: 0px;
+        transition: height 0.5s ease-in-out, opacity 0.5s ease-out;
+    }
+
+    nav ul.show {
+        display: flex;
+        transform: scaleY(1) translateX(0);
+        opacity: 1;
+        height: 230px;
+    }
+
+    nav ul.hide {
+        display: flex;
+        transform: scaleY(1) translateX(0);
+        opacity: 0;
+        height: 0px;
+    }
+
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+}
+
+main {
+    padding: 100px 0px 20px 20px; /* Añade un relleno superior para que el contenido no quede oculto detrás del header */
+}
