@@ -6,10 +6,12 @@
     <title>GEIFA - Inicio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css">
 </head>
 <body>
     <header>
-        <img src="images/logo_wb.png" alt="Logo del grupo estudiantil" id="logo">
+        <a href="index.html"><img src="images/logo_wb.png" alt="Logo del grupo estudiantil" id="logo"></a>
         <nav>
             <button id="menu-toggle">☰</button>
             <ul id="menu">
@@ -23,8 +25,19 @@
         </nav>
     </header>
     <main>
-        <h1>Bienvenidos a GEIFA</h1>
-        <p>Esta es la página principal de nuestro grupo.</p>
+        <div id="animation-container"></div>
+        <div class="container">
+            <div id="content">
+                <h1>Ejemplo de Contenido</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit enim vel odio elementum posuere. Duis nec magna in nulla condimentum suscipit. Suspendisse potenti.</p>
+                <p>Praesent consectetur arcu id velit feugiat tristique. Integer at dui vestibulum, consectetur mi id, suscipit turpis. Aliquam luctus risus ut tempus interdum.</p>
+                <p>Curabitur nec convallis ipsum. Mauris bibendum eros nec velit lobortis, a aliquam enim pharetra. In ultrices leo vel eros vestibulum consequat. Nam et pretium velit. Duis id nisl at nulla feugiat gravida. Etiam in felis vitae est vestibulum sodales.</p>
+                <p>Maecenas sit amet nulla id ipsum ultricies varius. Integer vel mauris lorem. Fusce tincidunt risus sed odio finibus, ac convallis risus dapibus. Vestibulum consequat massa a nunc interdum consequat.</p>
+                <p>Proin eu feugiat mi. Nunc in metus sit amet elit ultrices viverra at vitae magna. Aenean quis enim vitae ligula placerat luctus vel id est.</p>
+                <p>Donec blandit orci eget est facilisis, ac volutpat neque pellentesque. Nullam a augue vel felis aliquam feugiat id at justo. Vestibulum vestibulum mauris quis libero volutpat, vel vehicula velit finibus.</p>
+                <p>Quisque ultrices dui at tellus vulputate ultrices. Mauris nec diam nec elit ullamcorper vehicula a ac justo. In ut est vel ex posuere iaculis id sed ex. Nullam feugiat, tortor quis congue pharetra, metus diam cursus urna, nec ultricies velit quam vitae nunc. Integer vel tincidunt odio.</p>
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

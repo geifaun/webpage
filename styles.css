@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui;
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
+    overflow: auto; /* Permitir desplazamiento */
 }
 
 header {
@@ -113,7 +113,7 @@ nav a.us {
         display: flex;
         transform: scaleY(1) translateX(0);
         opacity: 1;
-        height: 230px;
+        height: 250px;
     }
 
     nav ul.hide {
@@ -135,4 +135,73 @@ nav a.us {
 
 main {
     padding: 100px 0px 20px 20px; 
+}
+
+#animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.equation {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-size: 1.5vw;
+}
+
+.phrase {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    font-family: system-ui;
+    font-style: italic;
+    font-size: max(3vw, 25px);
+    font-weight: bold;
+    text-align: center;
+    color: #6a0f36;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    width: 95%;
+    position: absolute;
+    background-color: #f0f0f0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    margin-top: 75vh; /* Comenzar la tarjeta a mitad de la pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container::before {
+    content: "";
+    display: block;
+    height: 50vh; /* Espacio ocupado por la animación */
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.content {
+    /* Puedes añadir estilos adicionales aquí */
 }
