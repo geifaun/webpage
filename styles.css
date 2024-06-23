@@ -499,3 +499,20 @@ main {
         gap: 20px;
     }
 }
+
+
+/*Posts page - Instagram feed*/
+
+.embed-instagram {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.embed-instagram iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
