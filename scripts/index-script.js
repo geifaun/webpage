@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function createPhraseElement() {
         const div = document.createElement('div');
-        div.className = 'phrase';
+        div.className = 'animated-phrase';
         div.textContent = 'Exploremos la física';
         return div;
     }
