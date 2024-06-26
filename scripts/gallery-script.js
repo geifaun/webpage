@@ -11,35 +11,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    document.querySelectorAll('.load-more').forEach(function(button) {
-        button.addEventListener('click', function() {
-            const event = button.closest('.event');
-            const hiddenPhotos = event.querySelectorAll('.photo.hidden');
-            const photosToShow = Array.from(hiddenPhotos).slice(0, 3);
+    document.querySelectorAll('.event').forEach(function(event) {
+        const photos = event.querySelectorAll('.photo');
+        const loadMoreButton = event.querySelector('.load-more');
+        const showLessButton = event.querySelector('.show-less');
 
-            photosToShow.forEach(function(photo) {
-                photo.classList.remove('hidden');
-            });
-
-            if (hiddenPhotos.length <= 3) {
-                button.style.display = 'none';
-                event.querySelector('.show-less').style.display = 'block';
-            }
-        });
-    });
-
-    document.querySelectorAll('.show-less').forEach(function(button) {
-        button.addEventListener('click', function() {
-            const event = button.closest('.event');
-            const allPhotos = event.querySelectorAll('.photo');
-
-            Array.from(allPhotos).slice(3).forEach(function(photo) {
+        // Check if there are more than 3 photos initially
+        if (photos.length <= 3) {
+            loadMoreButton.style.display = 'none';
+            showLessButton.style.display = 'none';
+        } else {
+            // Initially hide all photos after the first 3
+            Array.from(photos).slice(3).forEach(function(photo) {
                 photo.classList.add('hidden');
             });
 
-            button.style.display = 'none';
-            event.querySelector('.load-more').style.display = 'block';
-        });
+            loadMoreButton.addEventListener('click', function() {
+                const hiddenPhotos = event.querySelectorAll('.photo.hidden');
+                const photosToShow = Array.from(hiddenPhotos).slice(0, 3);
+
+                photosToShow.forEach(function(photo) {
+                    photo.classList.remove('hidden');
+                });
+
+                if (hiddenPhotos.length <= 3) {
+                    loadMoreButton.style.display = 'none';
+                    showLessButton.style.display = 'block';
+                }
+            });
+
+            showLessButton.addEventListener('click', function() {
+                Array.from(photos).slice(3).forEach(function(photo) {
+                    photo.classList.add('hidden');
+                });
+
+                showLessButton.style.display = 'none';
+                loadMoreButton.style.display = 'block';
+            });
+        }
     });
 
     // Modal functionality

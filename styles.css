@@ -287,6 +287,7 @@ main {
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 
@@ -328,7 +329,7 @@ main {
 .right-column h2 {
     font-family: system-ui;
     font-size: 3em; 
-    color: #cf6216; 
+    color: #6a0f36; 
     margin-bottom: 20px;
     text-align: center; 
 }
@@ -350,7 +351,7 @@ main {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #000; 
+    color: #000000; 
     font-weight: bold; 
 }
 
@@ -386,7 +387,7 @@ main {
 
 .board h2 {
     font-size: 3em;
-    color: #b7280f;
+    color: #6a0f36;
     margin-bottom: 20px;
 }
 
@@ -448,7 +449,7 @@ main {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #000; 
+    color: #000000; 
     font-weight: bold; 
 }
 
@@ -530,6 +531,10 @@ main {
 
 .event h2 {
     margin: 10px 0;
+    text-align: center;
+    font-size: 2.5em;
+    color: #6a0f36;
+    ;
 }
 
 .photos {
@@ -569,10 +574,13 @@ main {
     color: #ffffff;
     font-family: system-ui;
     font-weight: bold;
+    font-size: 1em;
     border: none;
     cursor: pointer;
     text-align: center; 
     margin: 5px; 
+    height: 50px;
+    width: 175px;
 }
 
 .load-more:hover, .show-less:hover {
@@ -625,4 +633,101 @@ main {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/*Events page - Events*/
+
+.section-title {
+    font-size: 2.5em;
+    color: #6a0f36;
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.event-section {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 10px;
+    max-width: 900px; /* Ancho máximo para la tarjeta de evento */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.event-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.event-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px;
+}
+
+.event-title {
+    font-size: 2em;
+    margin: 0;
+    color: #aa090d;
+}
+
+.event-details {
+    margin: 5px 0;
+}
+
+.event-description {
+    margin: 10px 0 0 0;
+}
+
+.show-more-btn {
+    display: none;
+    padding: 10px 20px;
+    margin: 10px auto;
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    background-color: #5d184d;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 50px;
+    width: 175px;
+}
+
+.show-more-btn:hover {
+    background-color: #531244;
+}
+
+/* Responsivo */
+@media (min-width: 601px) {
+    .event-box {
+        flex-direction: row;
+    }
+    .event-image {
+        width: 30%;
+        max-width: 100%;
+    }
+    .event-info {
+        width: 70%;
+        padding-left: 20px;
+    }
 }
