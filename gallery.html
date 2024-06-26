@@ -23,8 +23,59 @@
         </nav>
     </header>
     <main>
-        <h1>Bienvenidos a GEIFA</h1>
-        <p>Esta es la página principal de nuestro grupo.</p>
+        <div id="static-container">
+            <div id="static-phrase">Galería</div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="gallery">
+                    <!-- Evento 1 -->
+                    <div class="event">
+                        <h2>Feria XX - 01/01/2023</h2>
+                        <div class="photos" id="event1">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 1" class="photo">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 2" class="photo">
+                            <img src="images\board_members\jesus_estrada.png" alt="Descripción de la imagen 3" class="photo">
+
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 4" class="photo hidden">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 5" class="photo hidden">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 6" class="photo hidden">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 7" class="photo hidden">
+                            <img src="images\board_members\jesus_estrada.png" alt="Descripción de la imagen 8" class="photo hidden">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 9" class="photo hidden">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 10" class="photo hidden">
+                        </div>
+                        <div class="button-container">
+                            <button class="load-more">Mostrar más</button>
+                            <button class="show-less hidden">Mostrar menos</button>
+                        </div>
+                    </div>
+                    <!-- Evento 2 -->
+                    <div class="event">
+                        <h2>Evento YY - 02/02/2023</h2>
+                        <div class="photos" id="event2">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 1" class="photo">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 2" class="photo">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 3" class="photo">
+                            
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 4" class="photo hidden">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 5" class="photo hidden">
+                            <img src="images/group_pic.jpeg" alt="Descripción de la imagen 6" class="photo hidden">
+                        </div>
+                        <div class="button-container">
+                            <button class="load-more">Mostrar más</button>
+                            <button class="show-less hidden">Mostrar menos</button>
+                        </div>
+                    </div>
+                    <!-- Añadir más eventos aquí -->
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <div id="caption"></div>
+        </div>
     </main>
     <script src="scripts/gallery-script.js"></script>
 </body>
