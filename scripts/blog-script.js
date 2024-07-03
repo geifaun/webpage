@@ -12,16 +12,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-
-document.getElementById('category-filter').addEventListener('change', function() {
-    const category = this.value;
-    const blogItems = document.querySelectorAll('.blog-item');
-
-    blogItems.forEach(item => {
-        if (category === 'all' || item.getAttribute('data-category') === category) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-});

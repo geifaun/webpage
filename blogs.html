@@ -23,8 +23,40 @@
         </nav>
     </header>
     <main>
-        <h1>Bienvenidos a GEIFA</h1>
-        <p>Esta es la página principal de nuestro grupo.</p>
+        <div id="static-container">
+            <div id="static-phrase">Blogs</div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="blog-filters">
+                    <span>Categoría:</span>
+                    <select id="category-filter">
+                        <option value="all">Todos</option>
+                        <option value="personal">Personal</option>
+                        <option value="news">Noticia</option>
+                        <option value="scientific">Divulgativo</option>
+                    </select>
+                </div>
+                <div class="blog-list">
+                    <div class="blog-item" data-category="personal">
+                        <img src="images/group_pic.jpeg" alt="El renacer de GEIFA">
+                        <h2>El renacer de GEIFA</h2>
+                        <h3>Jesús Estrada</h3>
+                        <h4 class="blog-date">28/06/2020</h4>
+                        <h5><font color="#e89d1c">Personal</font></h5>
+                        <p>Mi historia con GEIFA comienza incluso antes de entrar a la universidad. Me encontraba en 2020, justo antes de la... <a href="blogs/blog-0001.html">Leer más</a></p>
+                    </div>
+                    <!-- <div class="blog-item" data-category="news">
+                        <img src="images/group_pic.jpeg" alt="El renacer de GEIFA">
+                        <h2>El renacer de GEIFA</h2>
+                        <h3>Jesús Estrada</h3>
+                        <h4 class="blog-date">28/06/2020</h4>
+                        <h5><font color="#cf6216">Noticia</font></h5>
+                        <p>Mi historia con GEIFA comienza incluso antes de entrar a la universidad. Me encontraba en 2020, justo antes de la... <a href="ruta/a/blog.html">Leer más</a></p>
+                    </div> -->
+                </div>
+            </div>                
+        </div>
     </main>
     <script src="scripts/blogs-script.js"></script>
 </body>
