@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {latex: "U = QV", size: "1.2vw", position: {top: '90%', left: '60%'}},
         {latex: "P = \\frac{F}{A}", size: "1.5vw", position: {top: '10%', left: '30%'}},
         {latex: "\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2}", size: "1.8vw", position: {top: '15%', left: '45%'}},
-        {latex: "\\nabla \\cdot \\mathbf{B} = 0", size: "2vw", position: {top: '72.5%', left: '77.5%'}},
+        {latex: "\\nabla \\cdot \\mathbf{B} = 0", size: "2vw", position: {top: '70%', left: '80%'}},
         {latex: "\\mathbf{F} = q\\mathbf{E}", size: "1.2vw", position: {top: '60%', left: '90%'}},
         {latex: "E = hf", size: "1.2vw", position: {top: '35%', left: '90%'}},
         {latex: "\\frac{dW}{dt} = P", size: "1.5vw", position: {top: '77.5%', left: '90%'}},
@@ -41,17 +41,21 @@ document.addEventListener('DOMContentLoaded', function() {
         {latex: "I = \\frac{\\Delta Q}{\\Delta t}", size: "1.2vw", position: {top: '30%', left: '80%'}},
         {latex: "\\tau = I \\alpha", size: "1.5vw", position: {top: '17.5%', left: '7.5%'}},
         {latex: "\\mathbf{F} = q \\mathbf{E} + q \\mathbf{v} \\times \\mathbf{B}", size: "1.8vw", position: {top: '60%', left: '50%'}},
-        {latex: "L = I \\omega", size: "1.2vw", position: {top: '75%', left: '65%'}},
-        {latex: "\\int \\mathbf{A} \\cdot d\\mathbf{l} = 0", size: "1.5vw", position: {top: '75%', left: '25%'}},
+        {latex: "L = I \\omega", size: "1.2vw", position: {top: '72.5%', left: '60%'}},
+        {latex: "\\int \\mathbf{A} \\cdot d\\mathbf{l} = 0", size: "1.5vw", position: {top: '77.5%', left: '25%'}},
         {latex: "\\mathbf{F} = -k \\mathbf{x}", size: "1.5vw", position: {top: '60%', left: '30%'}},
-        {latex: "U = mgh", size: "2.5vw", position: {top: '85%', left: '70%'}},
-        {latex: "\\Delta x = v_0 t + \\frac{1}{2} a t^2", size: "1.8vw", position: {top: '85%', left: '25%'}},
+        {latex: "U = mgh", size: "2.5vw", position: {top: '82.5%', left: '70%'}},
+        {latex: "\\Delta x = v_0 t + \\frac{1}{2} a t^2", size: "1.8vw", position: {top: '85%', left: '15%'}},
         {latex: "\\mathbf{p} = m \\mathbf{v}", size: "1.2vw", position: {top: '22.5%', left: '17.5%'}},
         {latex: "K = \\frac{1}{2} mv^2", size: "1.5vw", position: {top: '10%', left: '60%'}},
         {latex: "v = f\\lambda", size: "1.2vw", position: {top: '15%', left: '20%'}},
         {latex: "T = 2\\pi \\sqrt{\\frac{l}{g}}", size: "1.5vw", position: {top: '27.5%', left: '47.5    %'}},
         {latex: "\\Delta S \\geq 0", size: "1.8vw", position: {top: '65%', left: '5%'}},
-        {latex: "\\mathbf{J} = \\sigma \\mathbf{E}", size: "1.2vw", position: {top: '30%', left: '60%'}}
+        {latex: "\\mathbf{J} = \\sigma \\mathbf{E}", size: "1.2vw", position: {top: '30%', left: '60%'}},
+        {latex: "\\Delta x \\Delta p \\geq \\frac{\\hbar}{2}", size: "1.2vw", position: {top: '27.5%', left: '5%'}},
+        {latex: "Q = mc \\Delta T", size: "1.5vw", position: {top: '75%', left: '37.5%'}},
+        {latex: "c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}", size: "2vw", position: {top: '75%', left: '67.5%'}},
+        {latex: "E = hf", size: "1.2vw", position: {top: '85%', left: '40%'}}
     ];
 
     const colors = [
@@ -72,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function createPhraseElement() {
         const div = document.createElement('div');
         div.className = 'animated-phrase';
-        div.textContent = 'Exploremos la física';
+        div.textContent = 'Explorando la física';
         return div;
     }
 
@@ -80,14 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
         animationContainer.innerHTML = '';
 
         let delay = 0;
-        equations.forEach((equation) => {
-            const equationElement = createEquationElement(equation);
-            animationContainer.appendChild(equationElement);
-            setTimeout(() => {
-                equationElement.style.opacity = 1;
-            }, delay);
-            delay += 25; // Adjust delay between equations
-        });
+        if (window.innerWidth > 639) {
+            equations.forEach((equation) => {
+                const equationElement = createEquationElement(equation);
+                animationContainer.appendChild(equationElement);
+                setTimeout(() => {
+                    equationElement.style.opacity = 1;
+                }, delay);
+                delay += 25; // Adjust delay between equations
+            });
+        }
 
         const phraseElement = createPhraseElement();
         animationContainer.appendChild(phraseElement);
@@ -107,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     startAnimation();
+
+    window.addEventListener('resize', startAnimation);
 
     menuToggle.addEventListener('click', function() {
         menu.classList.toggle('show');

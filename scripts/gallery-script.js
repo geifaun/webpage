@@ -10,39 +10,37 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.classList.add('hide');
         }
     });
-    
+
     document.querySelectorAll('.event').forEach(function(event) {
-        const photos = event.querySelectorAll('.photo');
+        const photosAndVideos = event.querySelectorAll('.photo, .video');
         const loadMoreButton = event.querySelector('.load-more');
         const showLessButton = event.querySelector('.show-less');
 
-        // Check if there are more than 3 photos initially
-        if (photos.length <= 3) {
+        if (photosAndVideos.length <= 3) {
             loadMoreButton.style.display = 'none';
             showLessButton.style.display = 'none';
         } else {
-            // Initially hide all photos after the first 3
-            Array.from(photos).slice(3).forEach(function(photo) {
-                photo.classList.add('hidden');
+            Array.from(photosAndVideos).slice(3).forEach(function(media) {
+                media.classList.add('hidden');
             });
 
             loadMoreButton.addEventListener('click', function() {
-                const hiddenPhotos = event.querySelectorAll('.photo.hidden');
-                const photosToShow = Array.from(hiddenPhotos).slice(0, 3);
+                const hiddenMedia = event.querySelectorAll('.photo.hidden, .video.hidden');
+                const mediaToShow = Array.from(hiddenMedia).slice(0, 3);
 
-                photosToShow.forEach(function(photo) {
-                    photo.classList.remove('hidden');
+                mediaToShow.forEach(function(media) {
+                    media.classList.remove('hidden');
                 });
 
-                if (hiddenPhotos.length <= 3) {
+                if (hiddenMedia.length <= 3) {
                     loadMoreButton.style.display = 'none';
                     showLessButton.style.display = 'block';
                 }
             });
 
             showLessButton.addEventListener('click', function() {
-                Array.from(photos).slice(3).forEach(function(photo) {
-                    photo.classList.add('hidden');
+                Array.from(photosAndVideos).slice(3).forEach(function(media) {
+                    media.classList.add('hidden');
                 });
 
                 showLessButton.style.display = 'none';
@@ -51,21 +49,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Modal functionality
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
+    const modalVideo = document.createElement('video');
+    modalVideo.classList.add('modal-content');
+    modalVideo.setAttribute('controls', '');
     const captionText = document.getElementById('caption');
     const closeModal = document.getElementsByClassName('close')[0];
 
-    document.querySelectorAll('.photo').forEach(photo => {
-        photo.addEventListener('click', function() {
+    document.querySelectorAll('.photo, .video').forEach(media => {
+        media.addEventListener('click', function() {
             modal.style.display = 'block';
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+            if (media.tagName === 'IMG') {
+                modalImg.src = this.src;
+                modalImg.style.display = 'block';
+                modalVideo.style.display = 'none';
+                captionText.innerHTML = '';
+            } else if (media.tagName === 'VIDEO') {
+                modalVideo.src = media.querySelector('source').src;
+                modalImg.style.display = 'none';
+                modalVideo.style.display = 'block';
+                captionText.innerHTML = media.alt || '';
+                modal.appendChild(modalVideo);
+                modalVideo.play();
+            }
         });
     });
 
     closeModal.addEventListener('click', function() {
         modal.style.display = 'none';
+        modalVideo.pause();
+    });
+
+    modal.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            modalVideo.pause();
+        }
     });
 });

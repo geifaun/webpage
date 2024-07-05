@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEIFA - Inicio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css">
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="images/logo_wb.png" alt="Logo del grupo estudiantil" id="logo"></a>
+        <a href="index.html"><img src="media/logo_wb.png" alt="Logo del grupo estudiantil" id="logo"></a>
         <nav>
             <button id="menu-toggle">☰</button>
             <ul id="menu">
@@ -26,74 +26,138 @@
     </header>
     <main>
         <div id="animation-container"></div>
-        <div class="mainpage-container">
+        <div class="container">
             <div id="content">
                 <section class="hero">
                     <div class="hero-content">
-                        <h1>Bienvenidos a Nuestro Grupo</h1>
+                        <h1>Bienvenido a nuestro grupo</h1>
                         <p>Un lugar donde la pasión y el aprendizaje se encuentran.</p>
-                        <a href="#nosotros" class="cta-button">Únete a Nosotros</a>
+                        
                     </div>
                 </section>
             
-                <section id="nosotros" class="about">
-                    <h2>Sobre Nosotros</h2>
-                    <p>Somos un grupo estudiantil dedicado a...</p>
-                    <a href="us.html" class="cta-button">Más Información</a>
-                </section>
-            
-                <section id="eventos" class="events">
-                    <h2>Próximos Eventos</h2>
-                    <div class="event-cards">
-                        <!-- Tarjetas de eventos aquí -->
-                    </div>
-                    <a href="events.html" class="cta-button">Ver Todos los Eventos</a>
-                </section>
-            
-                <section id="blog" class="blog">
-                    <h2>Últimas Publicaciones</h2>
-                    <div class="blog-cards">
-                        <!-- Tarjetas de blog aquí -->
-                    </div>
-                    <a href="blog.html" class="cta-button">Leer Más</a>
-                </section>
-            
-                <section id="galeria" class="gallery">
-                    <h2>Galería</h2>
-                    <div class="gallery-images">
-                        <!-- Imágenes de la galería aquí -->
-                    </div>
-                    <a href="gallery.html" class="cta-button">Ver Galería</a>
-                </section>
-            
-                <section class="testimonials">
-                    <h2>Lo que dicen de nosotros</h2>
-                    <div class="testimonials-content">
-                        <!-- Testimonios aquí -->
-                    </div>
-                </section>
-            
-                <section class="subscribe">
-                    <h2>Suscríbete a nuestro boletín</h2>
-                    <form class="subscribe-form">
-                        <input type="email" placeholder="Tu correo electrónico">
-                        <button type="submit">Suscribirse</button>
-                    </form>
-                </section>
-            
-                <footer class="footer">
-                    <div class="footer-content">
-                        <p>© 2024 Grupo Estudiantil. Todos los derechos reservados.</p>
-                        <div class="social-links">
-                            <a href="#">Facebook</a>
-                            <a href="#">Instagram</a>
-                            <a href="#">Twitter</a>
+                <section id="us">
+                    <div class="columns">
+                        <div class="left-column-50">
+                            <img src="media/group_pic_1.jpeg" alt="Imagen del grupo" class="left-column-img">
+                        </div>
+                        <div class="right-column-50">
+                            <h2 class="right-column-h2">¿Quiénes somos?</h2>
+                            <p class="right-column-p">Somos un grupo estudiantil de física aplicada de la Universidad del Norte que busca promover el interés y la curiosidad por la física y su aplicación en el mundo real. Nos enfocamos en el desarrollo de habilidades científicas, el fomento de la investigación y la aplicación de conocimientos teóricos en la solución de problemas aplicados a la sociedad actual.
+                            <div class="contact-info">
+                                <a href="mailto:geifa@uninorte.edu.co">
+                                    <img src="media/email_icon.svg" alt="Correo" class="icon">
+                                    <span>geifa@uninorte.edu.co</span>
+                                </a>
+                                <a href="https://instagram.com/geifaun" target="_blank">
+                                    <img src="media/instagram_icon.svg" alt="Instagram" class="icon">
+                                    <span>@geifaun</span>
+                                </a>
+                            </div>
+                            <a href="us.html" class="cta-button">Conoce más de nosotros</a>
                         </div>
                     </div>
-                </footer>
+                </section>
+
+                <hr class="hr">
+            
+                <section id="info-events">
+                    <div class="columns">
+                        <div class="left-column-30">
+                            <h2 class="column-h2">Eventos</h2>
+                            <a href="events.html" class="cta-button">Ver todos los eventos</a>
+                        </div>
+                        <div class="right-column-70">
+                            <div id="past-events" class="section-main">
+                                <div class="event-box-main">
+                                    <img src="media/events/cine_foro_tbbt.jpg" alt="Cine Foro: The Big Bang Theory" class="event-image-main">
+                                    <div class="event-info-main">
+                                        <h2 class="event-title-main">Cine Foro: The Big Bang Theory</h2>
+                                        <p class="event-details-main"><strong>Lugar📍:</strong> Salón I4-15</p>
+                                        <p class="event-details-main"><strong>Fecha📅:</strong> 17 de mayo del 2024</p>
+                                        <p class="event-details-main"><strong>Hora🕞:</strong> 10:30AM a 12:30M</p>
+                                    </div>
+                                </div>
+                                <div class="event-box-main">
+                                    <img src="media/events/python_course.jpg" alt="Python Course" class="event-image-main">
+                                    <div class="event-info-main">
+                                        <h2 class="event-title-main">Curso de Python para manipular datos de astrofísica y astronomía</h2>
+                                        <p class="event-details-main"><strong>Lugar📍:</strong> Salón 25G1</p>
+                                        <p class="event-details-main"><strong>Fecha📅:</strong> 11 de mayo del 2024</p>
+                                        <p class="event-details-main"><strong>Hora🕞:</strong> 11:30AM a 12:30M</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="hr">
+            
+                <section id="info-posts">
+                    <div class="columns-reversed">
+                        <div class="left-column-70">
+                            <div id="posts" class="section-main">
+                                <iframe src="//lightwidget.com/widgets/6111ff4d1e6a51a6933c2feae48b2b5a.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>
+                            </div> 
+                        </div>
+                        <div class="right-column-30">
+                            <h2 class="column-h2">Publicaciones</h2>
+                            <a href="posts.html" class="cta-button">Ver más publicaciones</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <hr class="hr">
+                
+                <section id="subscribe">
+                    <p>¡Suscríbete a nuestro correo electrónico y entérate de nuestros eventos, actividades, publicaciones y más!</p>
+                    <a href="http://eepurl.com/iw8PgY" class="cta-button">Suscríbete</a>
+                </section>
             </div>
         </div>
     </main>
+    <!-- <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Grupo Estudiantil. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer> -->
     <script src="scripts/index-script.js"></script>
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 </body>
 </html>
+
+<!-- <div id="past-events" class="section-main">
+    <h2 class="section-title">Eventos</h2>
+    <div class="event-box-main">
+        <img src="media/events/cine_foro_tbbt.jpg" alt="Cine Foro: The Big Bang Theory" class="event-image-main">
+        <div class="event-info-main">
+            <h2 class="event-title-main">Cine Foro: The Big Bang Theory</h2>
+            <p class="event-details-main"><strong>Lugar📍:</strong> Salón I4-15</p>
+            <p class="event-details-main"><strong>Fecha📅:</strong> 17 de mayo del 2024</p>
+            <p class="event-details-main"><strong>Hora🕞:</strong> 10:30AM a 12:30M</p>
+        </div>
+    </div>
+    <div class="event-box-main">
+        <img src="media/events/python_course.jpg" alt="Python Course" class="event-image-main">
+        <div class="event-info-main">
+            <h2 class="event-title-main">Curso de Python para manipular datos de astrofísica y astronomía</h2>
+            <p class="event-details-main"><strong>Lugar📍:</strong> Salón 25G1</p>
+            <p class="event-details-main"><strong>Fecha📅:</strong> 11 de mayo del 2024</p>
+            <p class="event-details-main"><strong>Hora🕞:</strong> 11:30AM a 12:30M</p>
+        </div>
+    </div>
+    <a href="events.html" class="cta-button">Ver todos los eventos</a>
+</div> -->
+
+<!-- <div id="posts" class="section-main">
+    <h2 class="section-title">Publicaciones</h2>
+    <iframe src="//lightwidget.com/widgets/ed5055f87a2852da8e5cb7fce474e276.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:75%;margin-bottom:10px;margin-top:15px;border:0;overflow:hidden;"></iframe>
+</div> 
+<a href="posts.html" class="cta-button">Ver más publicaciones</a>-->
