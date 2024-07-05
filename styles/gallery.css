@@ -250,6 +250,7 @@ main {
 
 .photo, .video {
     width: max(45vmin, 250px);
+    max-width: 100%;
     height: max(45vmin, 250px);
     object-fit: cover;
     cursor: pointer;
