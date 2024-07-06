@@ -301,12 +301,12 @@ main {
 }
 
 #category-filter {
-    padding: 5px 25px 5px 10px; /* Ajusta el padding para hacerlo más grande */
+    padding: 5px 25px 5px 10px; 
     font-size: 1em;
-    border-radius: 50px; /* Ajusta el radio de los bordes para hacerlo redondeado */
-    border: 2px solid #ccc; /* Añade un borde para darle más definición */
-    background-color: #ffffff; /* Color de fondo */
-    appearance: none; /* Elimina los estilos nativos del sistema operativo */
+    border-radius: 50px; 
+    border: 2px solid #ccc; 
+    background-color: #ffffff; 
+    appearance: none; 
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M7 10l5 5 5-5H7z"/></svg>');
@@ -316,14 +316,14 @@ main {
 }
 
 #category-filter:focus {
-    outline: none; /* Elimina el contorno al hacer foco */
+    outline: none; 
 }
 
 #category-filter::after {
-    content: "\25BC"; /* Código Unicode para la flecha hacia abajo */
+    content: "\25BC"; 
     position: absolute;
     top: 50%;
-    right: 10px; /* Ajusta la posición de la flecha hacia la derecha */
+    right: 10px; 
     transform: translateY(-50%);
 }
 
