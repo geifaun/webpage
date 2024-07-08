@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEIFA - Galería</title>
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="media/logo_wb.png" alt="Logo del grupo estudiantil" id="logo"></a>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="index.html" class="main">Inicio</a></li>
+                <li><a href="blogs.html" class="blogs">Blogs</a></li>
+                <li><a href="gallery.html" class="active galery">Galería</a></li>
+                <li><a href="posts.html" class="posts">Publicaciones</a></li>
+                <li><a href="events.html" class="events">Eventos</a></li>
+                <li><a href="us.html" class="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="static-container">
+            <div id="static-phrase">Galería</div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="gallery">
+                    <div class="event">
+                        <h2>Curso de Python</h2>
+                        <div class="photos-videos" id="course_python">
+                            <img src="media/gallery/course_python/photo_01.jpg" alt="Curso de Python - 1" class="photo">
+                            <img src="media/gallery/course_python/photo_02.jpg" alt="Curso de Python - 2" class="photo">
+                            <img src="media/gallery/course_python/photo_03.jpg" alt="Curso de Python - 3" class="photo">
+
+                            <img src="media/gallery/course_python/photo_04.jpg" alt="Curso de Python - 4" class="photo hidden">
+                        </div>
+                        <div class="button-container">
+                            <button class="load-more">Mostrar más</button>
+                            <button class="show-less hidden">Mostrar menos</button>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <h2>Mujeres y Ciencia</h2>
+                        <div class="photos-videos" id="mujeres_ciencia">
+                            <img src="media/gallery/mujeres_ciencia/photo_01.jpg" alt="Mujeres y Ciencia - 1" class="photo">
+                            <img src="media/gallery/mujeres_ciencia/photo_02.jpg" alt="Mujeres y Ciencia - 2" class="photo">
+                            <img src="media/gallery/mujeres_ciencia/photo_03.jpg" alt="Mujeres y Ciencia - 3" class="photo">
+                        </div>
+                        <div class="button-container">
+                            <button class="load-more">Mostrar más</button>
+                            <button class="show-less hidden">Mostrar menos</button>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <h2>Café Físico</h2>
+                        <div class="photos-videos" id="cafe_fisico">
+                            <img src="media/gallery/cafe_fisico/photo_01.jpg" alt="Café Físico - 1" class="photo">
+                            <video class="video" alt="Café Físico - 2">
+                                <source src="media/gallery/cafe_fisico/video_01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="button-container">
+                            <button class="load-more">Mostrar más</button>
+                            <button class="show-less hidden">Mostrar menos</button>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <h2>Inducción 2024-10</h2>
+                        <div class="photos-videos" id="induccion_2024_10">
+                            <img src="media/gallery/induccion_2024_10/photo_01.jpg" alt="Inducción 202410 - 1" class="photo">
+                            <video class="video" alt="Inducción 202410 - 2">
+                                <source src="media/gallery/induccion_2024_10/video_01.mp4" type="video/mp4">
+                            </video>
+                            <img src="media/gallery/induccion_2024_10/photo_02.jpg" alt="Inducción 202410 - 3" class="photo">
+                            <video class="video hidden" alt="Inducción 202410 - 4">
+                                <source src="media/gallery/induccion_2024_10/video_02.mp4" type="video/mp4">
+                            </video>
+                            <img src="media/gallery/induccion_2024_10/photo_03.jpg" alt="Inducción 202410 - 5" class="photo hidden">
+                            <video class="video hidden" alt="Inducción 202410 - 6">
+                                <source src="media/gallery/induccion_2024_10/video_03.mp4" type="video/mp4">
+                            </video>
+                            <img src="media/gallery/induccion_2024_10/photo_04.jpg" alt="Inducción 202410 - 7" class="photo hidden">
+                            <video class="video hidden" alt="Inducción 202410 - 8">
+                                <source src="media/gallery/induccion_2024_10/video_04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="button-container">
+                            <button class="load-more">Mostrar más</button>
+                            <button class="show-less hidden">Mostrar menos</button>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <h2>Feria Vive Uninorte 2024-10</h2>
+                        <div class="photos-videos" id="feria_vive_202410">
+                            <video class="video" alt="Feria Vive 202410 - 1">
+                                <source src="media/gallery/feria_vive_202410/video_01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="button-container">
+                            <button class="load-more">Mostrar más</button>
+                            <button class="show-less hidden">Mostrar menos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <div id="caption"></div>
+        </div>
+    </main>
+    <script src="scripts/gallery-script.js"></script>
+</body>
+</html>

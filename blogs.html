@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEIFA - Blogs</title>
+    <link rel="stylesheet" href="styles/blogs.css">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="media/logo_wb.png" alt="Logo del grupo estudiantil" id="logo"></a>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="index.html" class="main">Inicio</a></li>
+                <li><a href="blogs.html" class="active blogs">Blogs</a></li>
+                <li><a href="gallery.html" class="galery">Galería</a></li>
+                <li><a href="posts.html" class="posts">Publicaciones</a></li>
+                <li><a href="events.html" class="events">Eventos</a></li>
+                <li><a href="us.html" class="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="static-container">
+            <div id="static-phrase">Blogs</div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="blog-filters">
+                    <span>Categoría:</span>
+                    <select id="category-filter">
+                        <option value="all">Todos</option>
+                        <option value="personal">Personal</option>
+                        <option value="news">Noticia</option>
+                        <option value="scientific">Divulgativo</option>
+                    </select>
+                </div>
+                <div class="blog-list">
+                    <!-- Change font color of the blog category as follows:
+                     Personal: #e89d1c 
+                     News: #cf6216
+                     Scientific: #b7280f-->
+                    <div class="blog-item" data-category="personal">
+                        <img src="media/group_pic.jpeg" alt="El renacer de GEIFA">
+                        <h2>El renacer de GEIFA</h2>
+                        <h3>Jesús Estrada</h3>
+                        <h4 class="blog-date">28/06/2020</h4>
+                        <h5><font color="#e89d1c">Personal</font></h5>
+                        <p>Mi historia con GEIFA comienza incluso antes de entrar a la universidad. Me encontraba en 2020, justo antes de la... <a href="blogs/blog-0001.html">Leer más</a></p>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </main>
+    <script src="scripts/blogs-script.js"></script>
+</body>
+</html>

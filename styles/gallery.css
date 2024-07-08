@@ -1,0 +1,351 @@
+/* Body */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20%;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 25px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    width: 55%;
+    max-width: 1200px;
+}
+
+#logo {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+nav a.main {
+    color: #e89d1c;
+}
+
+nav a.blogs {
+    color: #cf6216;
+}
+
+nav a.galery {
+    color: #b7280f;
+}
+
+nav a.posts {
+    color: #9a0a17;
+}
+
+nav a.events {
+    color: #700e31;
+}
+
+nav a.us {
+    color: #5d184d;
+}
+
+/* Header - Menu toggle */
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+}
+
+@media (max-width: 1200px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: calc(50% - 75px);
+        transform: scaleY(0) translateX(0);
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 15px;
+        width: 150px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform-origin: top center;
+        opacity: 0;
+        overflow: hidden;
+        height: 0px;
+        transition: height 0.5s ease-in-out, opacity 0.5s ease-out;
+    }
+
+    nav ul.show {
+        display: flex;
+        transform: scaleY(1) translateX(0);
+        opacity: 1;
+        height: 250px;
+    }
+
+    nav ul.hide {
+        display: flex;
+        transform: scaleY(1) translateX(0);
+        opacity: 0;
+        height: 0px;
+    }
+
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+}
+
+/*Background*/
+
+main {
+    padding: 100px 0px 20px 20px;
+}
+
+#static-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    overflow: auto;
+}
+
+#static-phrase {
+    position: absolute;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    font-size: max(3vw, 40px);
+    font-weight: bold;
+    text-align: center;
+    color: #6a0f36;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+/*Content*/
+
+.container {
+    width: 95%;
+    position: absolute;
+    background-color: #f0f0f0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 1;
+    margin-top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 70%;
+}
+
+.container::before {
+    display: block;
+    height: 0vh;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.content {
+    position: static;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/*Gallery*/
+
+.gallery {
+    width: 100%;
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event h2 {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 2.5em;
+    color: #6a0f36;
+    ;
+}
+
+.photos-videos {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center
+}
+
+.photo, .video {
+    width: max(45vmin, 250px);
+    max-width: 100%;
+    height: max(45vmin, 250px);
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover, .video:hover {
+    transform: scale(1.025);
+}
+
+.hidden {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.load-more, .show-less {
+    padding: 10px 20px;
+    background-color: #5d184d;
+    border-radius: 50px;
+    color: #ffffff;
+    font-family: system-ui;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+    height: 50px;
+    width: 175px;
+}
+
+.load-more:hover, .show-less:hover {
+    background-color: #531244;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80vh;
+    display: block;
+    margin: auto;
+}
+
+.modal-content img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-content video {
+    width: 100%;
+    height: auto;
+}
+
+#caption {
+    font-family: system-ui;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

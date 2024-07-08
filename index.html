@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEIFA - Inicio</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="media/logo_wb.png" alt="Logo del grupo estudiantil" id="logo"></a>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="index.html" class="active main">Inicio</a></li>
+                <li><a href="blogs.html" class="blogs">Blogs</a></li>
+                <li><a href="gallery.html" class="galery">Galería</a></li>
+                <li><a href="posts.html" class="posts">Publicaciones</a></li>
+                <li><a href="events.html" class="events">Eventos</a></li>
+                <li><a href="us.html" class="us">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="animation-container"></div>
+        <div class="container">
+            <div id="content">
+                <section class="hero">
+                    <div class="hero-content">
+                        <h1>Bienvenido a nuestro grupo</h1>
+                        <p>Un lugar donde la pasión y el aprendizaje se encuentran.</p>
+                    </div>
+                </section>
+                <section id="us">
+                    <div class="columns">
+                        <div class="left-column-50">
+                            <img src="media/group_pic_1.jpeg" alt="Imagen del grupo" class="left-column-img">
+                        </div>
+                        <div class="right-column-50">
+                            <h2 class="right-column-h2">¿Quiénes somos?</h2>
+                            <p class="right-column-p">Somos un grupo estudiantil de física aplicada de la Universidad del Norte que busca promover el interés y la curiosidad por la física y su aplicación en el mundo real. Nos enfocamos en el desarrollo de habilidades científicas, el fomento de la investigación y la aplicación de conocimientos teóricos en la solución de problemas aplicados a la sociedad actual.
+                            <div class="contact-info">
+                                <a href="mailto:geifa@uninorte.edu.co">
+                                    <img src="media/email_icon.svg" alt="Correo" class="icon">
+                                    <span>geifa@uninorte.edu.co</span>
+                                </a>
+                                <a href="https://instagram.com/geifaun" target="_blank">
+                                    <img src="media/instagram_icon.svg" alt="Instagram" class="icon">
+                                    <span>@geifaun</span>
+                                </a>
+                            </div>
+                            <a href="us.html" class="cta-button">Conoce más de nosotros</a>
+                        </div>
+                    </div>
+                </section>
+                <hr class="hr">
+                <section id="info-events">
+                    <div class="columns">
+                        <div class="left-column-30">
+                            <h2 class="column-h2">Eventos</h2>
+                            <a href="events.html" class="cta-button">Ver todos los eventos</a>
+                        </div>
+                        <div class="right-column-70">
+                            <div id="events" class="section-main">
+                                <div class="event-box-main">
+                                    <img src="media/events/cine_foro_tbbt.jpg" alt="Cine Foro: The Big Bang Theory" class="event-image-main">
+                                    <div class="event-info-main">
+                                        <h2 class="event-title-main">Cine Foro: The Big Bang Theory</h2>
+                                        <p class="event-details-main"><strong>Lugar📍:</strong> Salón I4-15</p>
+                                        <p class="event-details-main"><strong>Fecha📅:</strong> 17 de mayo del 2024</p>
+                                        <p class="event-details-main"><strong>Hora🕞:</strong> 10:30AM a 12:30M</p>
+                                    </div>
+                                </div>
+                                <div class="event-box-main">
+                                    <img src="media/events/python_course.jpg" alt="Python Course" class="event-image-main">
+                                    <div class="event-info-main">
+                                        <h2 class="event-title-main">Curso de Python para manipular datos de astrofísica y astronomía</h2>
+                                        <p class="event-details-main"><strong>Lugar📍:</strong> Salón 25G1</p>
+                                        <p class="event-details-main"><strong>Fecha📅:</strong> 11 de mayo del 2024</p>
+                                        <p class="event-details-main"><strong>Hora🕞:</strong> 11:30AM a 12:30M</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr class="hr">
+                <section id="info-posts">
+                    <div class="columns-reversed">
+                        <div class="left-column-70">
+                            <div id="posts" class="section-main">
+                                <iframe src="//lightwidget.com/widgets/6111ff4d1e6a51a6933c2feae48b2b5a.html" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>  
+                            </div> 
+                        </div>
+                        <div class="right-column-30">
+                            <h2 class="column-h2">Publicaciones</h2>
+                            <a href="posts.html" class="cta-button">Ver más publicaciones</a>
+                        </div>
+                    </div>
+                </section>
+                <hr class="hr">
+                <section id="subscribe">
+                    <p>¡Suscríbete a nuestro correo electrónico y entérate de nuestros eventos, actividades, publicaciones y más!</p>
+                    <a href="http://eepurl.com/iw8PgY" class="cta-button">Suscríbete</a>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/index-script.js"></script>
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+</body>
+</html>
