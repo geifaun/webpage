@@ -136,6 +136,10 @@ nav a.us {
     }
 }
 
+.menu-icon {
+    height: 20px;
+}
+
 /*Background*/
 
 main {
@@ -260,6 +264,28 @@ main {
 
 .photo:hover, .video:hover {
     transform: scale(1.025);
+}
+
+.video-container {
+    position: relative;
+    display: inline-block;
+}
+
+.video-container .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; /* Ajusta el ancho del triángulo */
+    height: 50px; /* Ajusta la altura del triángulo */
+    background-color: white;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.video-container .play-button:hover {
+    opacity: 1;
 }
 
 .hidden {
