@@ -161,6 +161,7 @@ main {
     opacity: 0;
     transition: opacity 1s ease-in-out;
     font-size: 1.5vw;
+    user-select: none;
 }
 
 .animated-phrase {
@@ -176,6 +177,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
 }
 
 /*Content*/

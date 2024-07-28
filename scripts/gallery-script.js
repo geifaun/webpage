@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalVideo = document.createElement('video');
     modalVideo.classList.add('modal-content');
     modalVideo.setAttribute('controls', '');
-    modalVideo.setAttribute('playsinline', '');  // Ensure playsinline attribute is set
+    modalVideo.setAttribute('playsinline', '');
     const captionText = document.getElementById('caption');
     const closeModal = document.getElementsByClassName('close')[0];
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalVideo.style.display = 'block';
                 captionText.innerHTML = media.alt || '';
                 modal.appendChild(modalVideo);
-                modalVideo.load(); // Ensure the video is loaded before playing
+                modalVideo.load();
                 modalVideo.play();
             }
         });
@@ -81,18 +81,17 @@ document.addEventListener('DOMContentLoaded', function() {
     closeModal.addEventListener('click', function() {
         modal.style.display = 'none';
         modalVideo.pause();
-        modalVideo.src = ''; // Reset the source to stop the video
+        modalVideo.src = '';
     });
 
     modal.addEventListener('click', function(event) {
         if (event.target == modal) {
             modal.style.display = 'none';
             modalVideo.pause();
-            modalVideo.src = ''; // Reset the source to stop the video
+            modalVideo.src = '';
         }
     });
 
-    // Handle canplay event for the video to ensure it plays on iOS
     modalVideo.addEventListener('canplay', function() {
         modalVideo.play();
     });
